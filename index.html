@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Qentiv — Query. Attention. Value.</title>
+<meta name="description" content="Qentiv — Query. Attention. Value.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0914">
+<meta property="og:title" content="Qentiv">
+<meta property="og:description" content="Query. Attention. Value.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 320'%3E%3Crect width='320' height='320' rx='72' fill='%230a0914'/%3E%3Crect x='70' y='70' width='180' height='180' rx='46' fill='none' stroke='%236C4FE0' stroke-width='40'/%3E%3Cline x1='170' y1='170' x2='250' y2='250' stroke='%23F1EEFF' stroke-width='40' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+/* JetBrains Mono Regular, subset to the glyphs this page draws (A–Z, space,
+   . , - : · and the divider's ◆), embedded so the page makes no font request.
+   Copyright 2020 The JetBrains Mono Project Authors
+   (https://github.com/JetBrains/JetBrainsMono), SIL Open Font License 1.1
+   (https://openfontlicense.org). If the tagline text ever changes, re-subset
+   the font to include any new characters.                                 */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(data:font/woff;base64,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) format('woff');
+}
+
+:root {
+  color-scheme: dark;
+  --violet: #6C4FE0;
+  --lav: #F1EEFF;
+  --bg: #0a0914;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --wm-w: clamp(280px, 84vw, 680px);
+  box-sizing: border-box;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(108,79,224,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108,79,224,0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  padding:
+    env(safe-area-inset-top, 0px)
+    env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px)
+    env(safe-area-inset-left, 0px);
+  overflow-x: hidden;
+  font-family: var(--mono);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.logo-tilt { margin: auto; padding: 24px 16px; }
+
+.logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(22px, 5vh, 44px);
+}
+
+.wordmark { width: var(--wm-w); line-height: 0; }
+.wordmark svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+/* ── One orchestrated moment: letters rise in order, the Q's tail
+      slides through the ring, the i's dot lands, then it keeps a
+      slow violet glow. ── */
+.ring  { animation: fade .8s ease backwards; }
+.l     { animation: rise .9s cubic-bezier(.2,.7,.2,1) backwards;
+         animation-delay: calc(.35s + var(--i) * .09s); }
+.tail  { animation: slide .7s cubic-bezier(.2,.7,.2,1) backwards .85s; }
+.dot   { animation: land .6s cubic-bezier(.2,.7,.2,1) backwards 1.25s; }
+.glow  { animation: breathe 3.6s ease-in-out infinite 2s; opacity: .2; }
+
+@keyframes fade    { from { opacity: 0; } }
+@keyframes rise    { from { opacity: 0; transform: translateY(18px); } }
+@keyframes slide   { from { opacity: 0; transform: translate(-20px, -20px); } }
+@keyframes land    { from { opacity: 0; transform: translate(-8px, 10px); } }
+@keyframes breathe { 0%, 100% { opacity: .15; } 50% { opacity: .65; } }
+
+.tagline {
+  font-size: max(12px, calc(var(--wm-w) * 0.036));
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(241, 238, 255, .62);
+  white-space: nowrap;
+  animation: fade 1s ease backwards 1.7s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring, .l, .tail, .dot, .tagline { animation: none; }
+  .glow { animation: none; opacity: .35; }
+  .logo-tilt { transform: none !important; }
+}
+</style>
+</head>
+<body>
+
+<main class="logo-tilt" id="tilt">
+  <div class="logo-wrap">
+
+    <h1 class="wordmark">
+      <span class="sr-only">Qentiv</span>
+      <svg viewBox="160 195 755 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <!-- the tail cuts a thin gap out of the ring -->
+          <mask id="cut" maskUnits="userSpaceOnUse" x="140" y="180" width="320" height="240">
+            <rect x="140" y="180" width="320" height="240" fill="#fff"/>
+            <line x1="289" y1="314" x2="358" y2="383" stroke="#000" stroke-width="44" stroke-linecap="round"/>
+          </mask>
+          <filter id="blur" x="-150%" y="-150%" width="400%" height="400%">
+            <feGaussianBlur stdDeviation="7"/>
+          </filter>
+        </defs>
+
+        <!-- Q -->
+        <rect class="ring" mask="url(#cut)" x="189" y="211" width="172" height="174" rx="44"
+              fill="none" stroke="#6C4FE0" stroke-width="32"/>
+        <line class="tail" x1="289" y1="314" x2="358" y2="383"
+              stroke="#F1EEFF" stroke-width="30" stroke-linecap="round"/>
+
+        <!-- e n t i v -->
+        <g fill="#F1EEFF">
+          <path class="l" style="--i:0" fill-rule="evenodd"
+                d="M410,290 Q410,262 438,262 L477,262 Q505,262 505,290 L505,346 L438,346 L438,372 L480,372 L505,400 L438,400 Q410,400 410,372 Z M438,290 L438,318 L477,318 L477,290 Z"/>
+          <path class="l" style="--i:1"
+                d="M525,262 L592,262 Q620,262 620,290 L620,400 L592,384 L592,290 L553,290 L553,400 L525,384 Z"/>
+          <path class="l" style="--i:2"
+                d="M677,246 L705,228 L705,262 L735,262 L735,290 L705,290 L705,372 L724,372 L748,400 L705,400 Q677,400 677,372 L677,290 L650,290 L650,262 L677,262 Z"/>
+          <path class="l" style="--i:3" d="M770,262 L798,262 L798,400 L770,384 Z"/>
+          <path class="l" style="--i:4" d="M812,262 L843,262 L857,340 L881,262 L912,262 L872,400 L842,400 Z"/>
+        </g>
+
+        <!-- the i's dot -->
+        <line class="glow" x1="781" y1="226" x2="793" y2="238"
+              stroke="#6C4FE0" stroke-width="26" stroke-linecap="round" filter="url(#blur)"/>
+        <line class="dot" x1="781" y1="226" x2="793" y2="238"
+              stroke="#6C4FE0" stroke-width="26" stroke-linecap="round"/>
+      </svg>
+    </h1>
+
+    <p class="tagline">Query. Attention. Value.</p>
+
+  </div>
+</main>
+
+<script>
+/* ── Tilt ── */
+(function () {
+  const tilt = document.getElementById('tilt');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!tilt || reduced) return;
+
+  const MAX = 5;         // max degrees per axis (screen edge = full tilt)
+  const EASE = 0.09;     // lerp factor — lower = smoother/slower
+
+  let targetX = 0, targetY = 0;
+  let curX = 0, curY = 0;
+  let rafId = null;
+
+  function apply() {
+    tilt.style.transform =
+      `perspective(800px) rotateX(${curY.toFixed(3)}deg) rotateY(${curX.toFixed(3)}deg)`;
+  }
+
+  function render() {
+    curX += (targetX - curX) * EASE;
+    curY += (targetY - curY) * EASE;
+
+    const settled =
+      Math.abs(targetX - curX) < 0.01 && Math.abs(targetY - curY) < 0.01;
+
+    if (settled) {
+      curX = targetX;
+      curY = targetY;
+      rafId = null;
+      // At rest: drop the transform and the layer promotion, so the logo
+      // leaves the 3D layer and renders crisp (and cheap) again.
+      if (curX === 0 && curY === 0) {
+        tilt.style.transform = '';
+        tilt.style.willChange = '';
+      } else {
+        apply();
+      }
+      return;
+    }
+    apply();
+    rafId = requestAnimationFrame(render);
+  }
+
+  function kick() {
+    tilt.style.willChange = 'transform';
+    if (rafId === null) rafId = requestAnimationFrame(render);
+  }
+
+  function setFromPoint(clientX, clientY) {
+    const nx = (clientX / window.innerWidth  - 0.5) * 2;   // -1 … 1
+    const ny = (clientY / window.innerHeight - 0.5) * 2;   // -1 … 1
+    targetX =  nx * MAX;
+    targetY = -ny * MAX;
+    kick();
+  }
+
+  function reset() {
+    targetX = 0;
+    targetY = 0;
+    kick();
+  }
+
+  window.addEventListener('pointermove', e => setFromPoint(e.clientX, e.clientY), { passive: true });
+
+  document.documentElement.addEventListener('pointerleave', reset);
+  document.documentElement.addEventListener('mouseleave', reset);
+
+  window.addEventListener('pointerup', e => { if (e.pointerType !== 'mouse') reset(); });
+  window.addEventListener('pointercancel', reset);
+
+  window.addEventListener('blur', reset);
+})();
+</script>
+</body>
+</html>
